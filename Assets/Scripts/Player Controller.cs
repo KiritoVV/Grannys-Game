@@ -36,6 +36,9 @@ public class PlayerController : MonoBehaviour
         Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
         Vector3 velocity = moveSpeed * Time.deltaTime * dir;
 
+        //Is the sprint key pressesd
+
+
         // Check if there is any movement
         if (dir.magnitude >= 0.1f)
         {
@@ -46,5 +49,8 @@ public class PlayerController : MonoBehaviour
             controller.Move(velocity);
 
         }
+
+        //Animation speed parameter
+        animator.SetFloat("Speed", velocity.magnitude);
     }
 }
