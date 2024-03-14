@@ -9,7 +9,11 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Animator animator;
 
-    private float moveSpeed = 5.0f;
+    private float moveSpeed = 4.0f;
+
+    [Header("Movement system")]
+    public float walkSpeed = 4f;
+    public float runSpeed = 8f;
 
 
     void Start()
@@ -37,6 +41,17 @@ public class PlayerController : MonoBehaviour
         Vector3 velocity = moveSpeed * Time.deltaTime * dir;
 
         //Is the sprint key pressesd
+        if(Input.GetButton("Sprint"))
+        {
+            //Set the animation to run and increase the speed
+            moveSpeed = runSpeed;
+            animator.SetBool("Running", true);
+        }
+        else
+        {
+            moveSpeed = walkSpeed;
+            animator.SetBool("Running", false);
+        }
 
 
         // Check if there is any movement
