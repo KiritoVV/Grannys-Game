@@ -1,0 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Land : MonoBehaviour
+{
+    public enum LandStatus
+    {
+        Soil, Farmland, Watered
+    }
+
+    public LandStatus landStatus;
+
+    public Material soilMat, farmlandMat, wateredMat;
+    new Renderer renderer;
+    void Start()
+    {
+        renderer = GetComponent<Renderer>();
+        // Set the soil material to default
+        SwitchLandStatus(LandStatus.Soil);
+    }
+
+    //Decide what material to switch to
+    public void SwitchLandStatus(LandStatus statusToSwitch)
+    {
+        landStatus = statusToSwitch;
+        Material materialToSwitch = soilMat;
+
+
+        switch(statusToSwitch)
+        {
+            case LandStatus.Soil:
+                materialToSwitch = soilMat;
+                break;
+            case LandStatus.Farmland:
+                materialToSwitch = farmlandMat;
+                break;
+            case LandStatus.Watered:
+                materialToSwitch = wateredMat;
+                break;
+
+              
+        }
+
+        //Get the renderer to apply the changes
+        renderer.material = materialToSwitch;
+    }
+}
