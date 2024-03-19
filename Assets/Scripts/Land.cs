@@ -13,6 +13,9 @@ public class Land : MonoBehaviour
 
     public Material soilMat, farmlandMat, wateredMat;
     new Renderer renderer;
+
+    // The selection gameobject to enable when the player is selecting the land
+    public GameObject select;
     void Start()
     {
         renderer = GetComponent<Renderer>();
@@ -25,6 +28,9 @@ public class Land : MonoBehaviour
     {
         landStatus = statusToSwitch;
         Material materialToSwitch = soilMat;
+
+        //Deselect the land by default
+        Select (false);
 
 
         switch(statusToSwitch)
@@ -44,5 +50,16 @@ public class Land : MonoBehaviour
 
         //Get the renderer to apply the changes
         renderer.material = materialToSwitch;
+    }
+
+    public void Select(bool toggle)
+    {
+        select.SetActive(toggle);
+    }
+
+    public void Interact()
+    {
+        // Interaction
+        SwitchLandStatus(LandStatus.Farmland);
     }
 }

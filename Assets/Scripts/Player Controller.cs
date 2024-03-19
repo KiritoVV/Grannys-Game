@@ -15,12 +15,17 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
 
+    //Interaction Components
+    Playerinteraction playerinteraction;
+
 
     void Start()
     {
         // get movement components
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+
+        playerinteraction = GetComponentInChildren<Playerinteraction>();
     }
 
 
@@ -28,6 +33,18 @@ public class PlayerController : MonoBehaviour
     {
         // Runs the functions that handle all movements
         Move();
+
+        //Runs the function that hand;es all interaction
+        Interact();
+    }
+
+    public void Interact()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            //Interact
+            playerinteraction.Interact();
+        }
     }
     public void Move()
     {
