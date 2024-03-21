@@ -33,6 +33,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerExit(PointerEventData eventdata)
     {
-       
+        UIManager.Instance.DisplayeItemInfo(null);
+
     }
 }
