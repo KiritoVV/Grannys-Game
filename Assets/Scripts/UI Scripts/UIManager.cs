@@ -8,8 +8,19 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance { get; private set; }
 
     [Header("Inventory system")]
+    
+    //The item slot ui
     public InventorySlot[] toolSlots;
+
+    // The tool slots ui
     public InventorySlot[] itemSlots;
+
+    //The inventory Panel
+    public GameObject inventoryPanel;
+
+    //Item infro box
+    public Text itemNameText;
+    public Text itemDescriptionText;
 
     private void Awake()
     {
@@ -51,5 +62,27 @@ public class UIManager : MonoBehaviour
         {
             uiSlots[i].Display(slots[i]);
         }
+    }
+
+    public void ToggleInventoryPanel()
+    {
+       //If the panel is hidden, show it and vice versa
+       inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+
+        RenderInventory();
+    }
+
+    //Display item info on the item infobox
+    public void DisplayeItemInfo(ItemData data)
+    {
+       if(data == null)
+       {
+            itemNameText.text = "";
+            itemDescriptionText.text = "";
+            return;
+       }
+        
+        itemNameText.text = data.name;
+        itemDescriptionText.text = data.description;
     }
 }
