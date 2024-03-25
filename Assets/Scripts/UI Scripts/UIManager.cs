@@ -7,6 +7,11 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
 
+    [Header("Status Bar")]
+    //Tool equip slot on the status
+    public Image toolEquipSlot;
+
+
     [Header("Inventory system")]
     
     //The item slot ui
@@ -54,6 +59,22 @@ public class UIManager : MonoBehaviour
 
         //Render the item section
         RenderInventoryPanel(inventoryItemSlot, itemSlots);
+
+        //Get Tool Equip from InventoryManager
+        ItemData equippedTool = InventoryManager.Instance.equippedTool;
+        //check if there is an item to display
+
+        if (equippedTool != null)
+        {
+            toolEquipSlot.sprite = equippedTool.thumbnail;
+            
+            toolEquipSlot.gameObject.SetActive(true);
+
+            return;
+
+        }
+
+        toolEquipSlot.gameObject.SetActive(false);
     }
 
     void RenderInventoryPanel(ItemData[]slots, InventorySlot[] uiSlots)
