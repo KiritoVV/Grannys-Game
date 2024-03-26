@@ -70,7 +70,43 @@ public class InventoryManager : MonoBehaviour
 
     public  void HandToInventory(InventorySlot.InventoryType inventoryType)
     {
+        if(inventoryType == InventorySlot.InventoryType.Item)
+        {
+            //Iterate through each inventory slot and find an empty slot
 
+            for(int i =0; i < items.Length; i++)
+            {
+                if (items[i] == null)
+                {
+                    //Sends the equipped item over to its new slot
+                    items[i] = equippedItem;
+
+                    //Remove the item from the hand
+                    equippedItem = null;
+
+                    break;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < tool.Length; i++)
+            {
+                if (tool[i] == null)
+                {
+                    //Sends the equipped Tool over to its new slot
+                    tool[i] = equippedTool;
+
+                    //Remove the Tool from the hand
+                    equippedTool = null;
+
+                    break;
+                }
+            }
+          
+        }
+
+        UIManager.Instance.RenderInventory();
     }
 
 }

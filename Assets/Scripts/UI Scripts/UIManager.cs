@@ -17,8 +17,14 @@ public class UIManager : MonoBehaviour
     //The item slot ui
     public InventorySlot[] toolSlots;
 
+    //The tool equip slot UI on the inventory panel
+    public HandInventorySlot toolHandSlot;
+
     // The tool slots ui
     public InventorySlot[] itemSlots;
+
+    //The item equip slot UI on the inventory panel
+    public HandInventorySlot itemHandSlot;
 
     //The inventory Panel
     public GameObject inventoryPanel;
@@ -70,6 +76,12 @@ public class UIManager : MonoBehaviour
 
         //Render the item section
         RenderInventoryPanel(inventoryItemSlot, itemSlots);
+
+        //Tender the equipped slot
+        toolHandSlot.Display(InventoryManager.Instance.equippedTool);
+        itemHandSlot.Display(InventoryManager.Instance.equippedItem);
+
+
 
         //Get Tool Equip from InventoryManager
         ItemData equippedTool = InventoryManager.Instance.equippedTool;
