@@ -43,6 +43,17 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         RenderInventory();
+        AssignSlotIndexes();
+    }
+
+    //Iterate through the slot ui elements and assign its reference slot index
+    public void AssignSlotIndexes()
+    {
+        for (int i =0; i<toolSlots.Length; i++)
+        {
+            toolSlots[i].AssignIndex(i);
+            itemSlots[i].AssignIndex(i);
+        }
     }
 
     public void RenderInventory()
