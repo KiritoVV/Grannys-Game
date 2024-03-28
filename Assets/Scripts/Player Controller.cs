@@ -36,6 +36,13 @@ public class PlayerController : MonoBehaviour
 
         //Runs the function that hand;es all interaction
         Interact();
+
+        //Debugging purposes only
+        if( Input.GetKey(KeyCode.RightBracket))
+        {
+            TimeManager.Instance.Tick();
+        }
+
     }
 
     public void Interact()

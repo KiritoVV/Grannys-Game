@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UIManager : MonoBehaviour, ITimeTracker
 {
     public static UIManager Instance { get; private set; }
 
@@ -11,6 +11,9 @@ public class UIManager : MonoBehaviour
     //Tool equip slot on the status
     public Image toolEquipSlot;
 
+    //Time ui
+    public Text timeText;
+    public Text dateText;
 
     [Header("Inventory system")]
     
@@ -50,6 +53,9 @@ public class UIManager : MonoBehaviour
     {
         RenderInventory();
         AssignSlotIndexes();
+
+        //Add UiManager to the list of objects TimeManager will notify when the time update
+        TimeManager.Instance.Registertracker(this);
     }
 
     //Iterate through the slot ui elements and assign its reference slot index
@@ -128,5 +134,27 @@ public class UIManager : MonoBehaviour
         
         itemNameText.text = data.name;
         itemDescriptionText.text = data.description;
+    }
+
+    public void ClockUpdate(GameTimeStamp timeStamp)
+    {
+        //Handle the time 
+
+        //Get the hours and minutes
+        int hours = timeStamp.hour;
+        int minutes = timeStamp.minute;
+
+        //Am or Pm
+        string prefix = "AM ";
+
+        //Convert  hours to 12 hours clock
+        if(hours > 12)
+        {
+            //Time becomes Pm
+            prefix = "PM ";
+            hours = 12;
+        }
+
+        timeText.text = prefix + hours + ":" + minutes.ToString("00");
     }
 }

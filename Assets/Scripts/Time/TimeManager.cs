@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    public TimeManager Instance { get; private set; }
+    public static TimeManager Instance { get; private set; }
 
     [SerializeField]
     GameTimeStamp timestamp;
-
     public float timeScale = 1.0f;
+
+    [Header("Day and Night cycle")]
 
     //The transform of the direction of the sun
     public Transform sunTransform;
+
+    //Lost of objects to inform of changes to the time
+        List<ITimeTracker> listeners = new List<ITimeTracker>();
 
     private void Awake()
     {
@@ -47,7 +51,41 @@ public class TimeManager : MonoBehaviour
     public void Tick()
     {
         timestamp.UpdateClock();
+
+        //Inform each of the listners of the new time state
+        foreach (ITimeTracker listener in listeners)
+        {
+            listener.ClockUpdate(timestamp);
+        }
+        UpdateSunMovement();
+        
     }
 
+    void UpdateSunMovement()
+    {
+        //Day and night cycle
+        //Convert the current time to minutes
+        int timeInMinutes = GameTimeStamp.HoursToMinutes(timestamp.hour) + timestamp.minute;
 
+        //Sun moves 15 degrees in an hour
+        //0.25 degrees in a minute
+        // At midnight (0:00), the angle of the sun should be -90
+        float sunAngle = .25f * timeInMinutes - 90;
+
+        sunTransform.eulerAngles = new Vector3(sunAngle, 0, 0);
+    }
+
+    //Handling Listenners
+
+    //Add the object to the list of listeners
+    public void Registertracker(ITimeTracker listener)
+    {
+        listeners.Add(listener);
+    }
+
+    //Remove the obuject from the list of listener
+    public void UnregisterTracker(ITimeTracker listener)
+    {
+        listeners.Remove(listener);
+    }
 }
