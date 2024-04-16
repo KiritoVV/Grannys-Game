@@ -136,13 +136,13 @@ public class UIManager : MonoBehaviour, ITimeTracker
         itemDescriptionText.text = data.description;
     }
 
-    public void ClockUpdate(GameTimeStamp timeStamp)
+    public void ClockUpdate(GameTimeStamp timestamp)
     {
         //Handle the time 
 
         //Get the hours and minutes
-        int hours = timeStamp.hour;
-        int minutes = timeStamp.minute;
+        int hours = timestamp.hour;
+        int minutes = timestamp.minute;
 
         //Am or Pm
         string prefix = "AM ";
@@ -156,5 +156,13 @@ public class UIManager : MonoBehaviour, ITimeTracker
         }
 
         timeText.text = prefix + hours + ":" + minutes.ToString("00");
+
+        //Handle the date
+        int day = timestamp.day;
+        string season = timestamp.season.ToString();
+        string dayOfTheWeek = timestamp.GetDayOfTheWeek().ToString();
+
+        //Format it for the date text display
+        dateText.text = season + " " + day + " ("+dayOfTheWeek+") ";
     }
 }

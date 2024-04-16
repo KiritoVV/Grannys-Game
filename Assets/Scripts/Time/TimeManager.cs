@@ -6,6 +6,7 @@ public class TimeManager : MonoBehaviour
 {
     public static TimeManager Instance { get; private set; }
 
+    [Header("Internal Clock")]
     [SerializeField]
     GameTimeStamp timestamp;
     public float timeScale = 1.0f;
@@ -42,8 +43,9 @@ public class TimeManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1/timeScale);
             Tick();
+            yield return new WaitForSeconds(1/timeScale);
+            
         }
     }
 
@@ -57,6 +59,7 @@ public class TimeManager : MonoBehaviour
         {
             listener.ClockUpdate(timestamp);
         }
+
         UpdateSunMovement();
         
     }
@@ -73,6 +76,13 @@ public class TimeManager : MonoBehaviour
         float sunAngle = .25f * timeInMinutes - 90;
 
         sunTransform.eulerAngles = new Vector3(sunAngle, 0, 0);
+    }
+
+    //Get the timestamp
+    public GameTimeStamp GetGameTimeStamp()
+    {
+       //Return a clone instance
+        return new GameTimeStamp (timestamp);
     }
 
     //Handling Listenners
