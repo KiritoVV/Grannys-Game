@@ -27,6 +27,9 @@ public class Land : MonoBehaviour, ITimeTracker
         //Deselect the land by default
         Select(false);
 
+
+        //Add this to timeManager Listeners list
+        TimeManager.Instance.Registertracker(this);
     }
 
     //Decide what material to switch to
@@ -48,6 +51,7 @@ public class Land : MonoBehaviour, ITimeTracker
                 break;
             case LandStatus.Watered:
                 materialToSwitch = wateredMat;
+
                 timeWatered = TimeManager.Instance.GetGameTimeStamp();
                 break;
 
@@ -88,12 +92,21 @@ public class Land : MonoBehaviour, ITimeTracker
         }
     }
 
-    public void ClockUpdate(GameTimeStamp timeStamp)
+    public void ClockUpdate(GameTimeStamp timestamp)
     {
         //Check if 24 hours has passed since last watered
-        if(landStatus == LandStatus.Watered)
+        if (landStatus == LandStatus.Watered)
         {
+            //Hours since the land was watered
+            int hoursElapsed = GameTimeStamp.CompareTimestamps (timeWatered, timestamp);
+            Debug.Log(hoursElapsed + " hours since this was watered");
 
+            if(hoursElapsed > 24)
+            {
+                SwitchLandStatus(LandStatus.Farmland);
+            }
         }
+
+
     }
 }

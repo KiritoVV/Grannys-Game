@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 
@@ -126,9 +128,23 @@ public class GameTimeStamp
     {
         return years * 4 * 30;
     }
-
     
+    
+    
+    //Calculate the difference between 2 timestamps
+    public static int CompareTimestamps(GameTimeStamp timestamp1, GameTimeStamp timestamp2)
+    {
+        //Convert timestamps to hours
+        int timestamp1Hours = DaysToHours(YearsToDays(timestamp1.year)) + DaysToHours(SeasonToDays(timestamp1.season)) + DaysToHours(timestamp1.day) + timestamp1.hour;
+
+        int timestamp2Hours = DaysToHours(YearsToDays(timestamp2.year)) + DaysToHours(SeasonToDays(timestamp2.season)) + DaysToHours(timestamp2.day) + timestamp2.hour;
+
+        int difference  = timestamp2Hours - timestamp1Hours;
+
+        return Mathf.Abs(difference);
+    }
    
- 
+
+
 
 }

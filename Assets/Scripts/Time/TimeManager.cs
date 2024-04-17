@@ -17,7 +17,7 @@ public class TimeManager : MonoBehaviour
     public Transform sunTransform;
 
     //Lost of objects to inform of changes to the time
-        List<ITimeTracker> listeners = new List<ITimeTracker>();
+    List<ITimeTracker> listeners = new List<ITimeTracker>();
 
     private void Awake()
     {
