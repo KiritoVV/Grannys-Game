@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Shovel
   m_EditorClassIdentifier: 
   description: 
-  thumbnail: {fileID: 1808992580, guid: eecc5121db9958f42ac3be48bcbee1d3, type: 3}
+  thumbnail: {fileID: -118258509, guid: eecc5121db9958f42ac3be48bcbee1d3, type: 3}
   gameModel: {fileID: 0}
   toolType: 0
