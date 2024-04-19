@@ -115,7 +115,7 @@ public class Land : MonoBehaviour, ITimeTracker
         {
             GameObject cropObject = Instantiate(cropPrefab , transform);
             //Move the crop obje t to the top of the land gameObject
-            cropObject.transform.position = new Vector3(transform.position.x, 1.59f, transform.position.z);
+            cropObject.transform.position = new Vector3(transform.position.x, 1.2f, transform.position.z);
 
             //Access the CropBehaviour of our newly planted crop
             cropPlanted = cropObject.GetComponent<CropBehvaviour>();
