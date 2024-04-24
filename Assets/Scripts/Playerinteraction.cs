@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Playerinteraction : MonoBehaviour
@@ -13,11 +11,11 @@ public class Playerinteraction : MonoBehaviour
         playerController = transform.parent.GetComponent<PlayerController>();
     }
 
-    
+
     void Update()
     {
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, Vector3.down, out hit, 1))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1))
         {
             OnInteractableHit(hit);
         }
@@ -27,7 +25,7 @@ public class Playerinteraction : MonoBehaviour
     void OnInteractableHit(RaycastHit hit)
     {
         Collider other = hit.collider;
-        
+
         if (other.tag == "Land")
         {
             Land land = other.GetComponent<Land>();
@@ -36,7 +34,7 @@ public class Playerinteraction : MonoBehaviour
             return;
         }
 
-        if(selectedLand != null)
+        if (selectedLand != null)
         {
             selectedLand.Select(false);
             selectedLand = null;
@@ -56,8 +54,8 @@ public class Playerinteraction : MonoBehaviour
 
     public void Interact()
     {
-       // Check if the player is selecting any land
-       if(selectedLand != null)
+        // Check if the player is selecting any land
+        if (selectedLand != null)
         {
             selectedLand.Interact();
             return;

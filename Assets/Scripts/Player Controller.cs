@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -38,7 +36,7 @@ public class PlayerController : MonoBehaviour
         Interact();
 
         //Debugging purposes only
-        if( Input.GetKey(KeyCode.RightBracket))
+        if (Input.GetKey(KeyCode.RightBracket))
         {
             TimeManager.Instance.Tick();
         }
@@ -65,7 +63,7 @@ public class PlayerController : MonoBehaviour
         Vector3 velocity = moveSpeed * Time.deltaTime * dir;
 
         //Is the sprint key pressesd
-        if(Input.GetButton("Sprint"))
+        if (Input.GetButton("Sprint"))
         {
             //Set the animation to run and increase the speed
             moveSpeed = runSpeed;

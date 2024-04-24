@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +14,7 @@ public class UIManager : MonoBehaviour, ITimeTracker
     public Text dateText;
 
     [Header("Inventory system")]
-    
+
     //The item slot ui
     public InventorySlot[] toolSlots;
 
@@ -61,7 +59,7 @@ public class UIManager : MonoBehaviour, ITimeTracker
     //Iterate through the slot ui elements and assign its reference slot index
     public void AssignSlotIndexes()
     {
-        for (int i =0; i<toolSlots.Length; i++)
+        for (int i = 0; i < toolSlots.Length; i++)
         {
             toolSlots[i].AssignIndex(i);
             itemSlots[i].AssignIndex(i);
@@ -96,7 +94,7 @@ public class UIManager : MonoBehaviour, ITimeTracker
         if (equippedTool != null)
         {
             toolEquipSlot.sprite = equippedTool.thumbnail;
-            
+
             toolEquipSlot.gameObject.SetActive(true);
 
             return;
@@ -106,9 +104,9 @@ public class UIManager : MonoBehaviour, ITimeTracker
         toolEquipSlot.gameObject.SetActive(false);
     }
 
-    void RenderInventoryPanel(ItemData[]slots, InventorySlot[] uiSlots)
+    void RenderInventoryPanel(ItemData[] slots, InventorySlot[] uiSlots)
     {
-        for(int i = 0; i < uiSlots.Length; i++)
+        for (int i = 0; i < uiSlots.Length; i++)
         {
             uiSlots[i].Display(slots[i]);
         }
@@ -116,8 +114,8 @@ public class UIManager : MonoBehaviour, ITimeTracker
 
     public void ToggleInventoryPanel()
     {
-       //If the panel is hidden, show it and vice versa
-       inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+        //If the panel is hidden, show it and vice versa
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
 
         RenderInventory();
     }
@@ -125,13 +123,13 @@ public class UIManager : MonoBehaviour, ITimeTracker
     //Display item info on the item infobox
     public void DisplayeItemInfo(ItemData data)
     {
-       if(data == null)
-       {
+        if (data == null)
+        {
             itemNameText.text = "";
             itemDescriptionText.text = "";
             return;
-       }
-        
+        }
+
         itemNameText.text = data.name;
         itemDescriptionText.text = data.description;
     }
@@ -148,7 +146,7 @@ public class UIManager : MonoBehaviour, ITimeTracker
         string prefix = "AM ";
 
         //Convert  hours to 12 hours clock
-        if(hours > 12)
+        if (hours > 12)
         {
             //Time becomes Pm
             prefix = "PM ";
@@ -163,6 +161,6 @@ public class UIManager : MonoBehaviour, ITimeTracker
         string dayOfTheWeek = timestamp.GetDayOfTheWeek().ToString();
 
         //Format it for the date text display
-        dateText.text = season + " " + day + " ("+dayOfTheWeek+") ";
+        dateText.text = season + " " + day + " (" + dayOfTheWeek + ") ";
     }
 }

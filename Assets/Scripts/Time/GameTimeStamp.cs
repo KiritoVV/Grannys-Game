@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 
 [System.Serializable]
-public class GameTimeStamp 
+public class GameTimeStamp
 {
     public int year;
     public enum Season
@@ -37,8 +33,8 @@ public class GameTimeStamp
     public GameTimeStamp(int year, Season season, int day, int hour, int minute)
     {
         this.year = year;
-        this.season = season;   
-        this.day = day; 
+        this.season = season;
+        this.day = day;
         this.hour = hour;
         this.minute = minute;
     }
@@ -68,19 +64,19 @@ public class GameTimeStamp
         // 24 hours in 1 day
         if (hour >= 24)
         {
-           //Reset hours
+            //Reset hours
             hour = 0;
 
             day++;
         }
 
-        if(day >= 30)
+        if (day >= 30)
         {
             //Reset days
             day = 1;
 
             //If at the final season, reset and change to spring
-            if(season == Season.Winter)
+            if (season == Season.Winter)
             {
                 season = Season.Spring;
                 //Start of a new year
@@ -107,7 +103,7 @@ public class GameTimeStamp
     public static int HoursToMinutes(int hour)
     {
         //60 minutes = 1 hour
-        return hour *60;
+        return hour * 60;
     }
 
     //Convert Days to hours
@@ -128,9 +124,9 @@ public class GameTimeStamp
     {
         return years * 4 * 30;
     }
-    
-    
-    
+
+
+
     //Calculate the difference between 2 timestamps
     public static int CompareTimestamps(GameTimeStamp timestamp1, GameTimeStamp timestamp2)
     {
@@ -139,11 +135,11 @@ public class GameTimeStamp
 
         int timestamp2Hours = DaysToHours(YearsToDays(timestamp2.year)) + DaysToHours(SeasonToDays(timestamp2.season)) + DaysToHours(timestamp2.day) + timestamp2.hour;
 
-        int difference  = timestamp2Hours - timestamp1Hours;
+        int difference = timestamp2Hours - timestamp1Hours;
 
         return Mathf.Abs(difference);
     }
-   
+
 
 
 

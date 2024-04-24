@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Land : MonoBehaviour, ITimeTracker
@@ -46,7 +44,7 @@ public class Land : MonoBehaviour, ITimeTracker
         landStatus = statusToSwitch;
         Material materialToSwitch = soilMat;
 
-         
+
 
 
         switch (statusToSwitch)
@@ -63,7 +61,7 @@ public class Land : MonoBehaviour, ITimeTracker
                 timeWatered = TimeManager.Instance.GetGameTimeStamp();
                 break;
 
-              
+
         }
 
         //Get the renderer to apply the changes
@@ -88,7 +86,7 @@ public class Land : MonoBehaviour, ITimeTracker
         EquipmentData equipmentTool = toolSlot as EquipmentData;
 
         //Check if it is of type equipment
-        if( equipmentTool != null )
+        if (equipmentTool != null)
         {
             //get the tool type
             EquipmentData.ToolType toolType = equipmentTool.toolType;
@@ -96,7 +94,7 @@ public class Land : MonoBehaviour, ITimeTracker
             switch (toolType)
             {
                 case EquipmentData.ToolType.Hoe:
-                    SwitchLandStatus (LandStatus.Farmland);
+                    SwitchLandStatus(LandStatus.Farmland);
                     break;
                 case EquipmentData.ToolType.Wateringcan:
                     SwitchLandStatus(LandStatus.Watered);
@@ -111,9 +109,9 @@ public class Land : MonoBehaviour, ITimeTracker
         ///1: he is holding a tool of type SeedData
         ///2: The land State must be either watered or farmland
         ///3: There isnt already a crop that has been planted
-        if(seedTool != null  && landStatus != LandStatus.Soil && cropPlanted == null)
+        if (seedTool != null && landStatus != LandStatus.Soil && cropPlanted == null)
         {
-            GameObject cropObject = Instantiate(cropPrefab , transform);
+            GameObject cropObject = Instantiate(cropPrefab, transform);
             //Move the crop obje t to the top of the land gameObject
             cropObject.transform.position = new Vector3(transform.position.x, 1.2f, transform.position.z);
 
@@ -131,16 +129,16 @@ public class Land : MonoBehaviour, ITimeTracker
         if (landStatus == LandStatus.Watered)
         {
             //Hours since the land was watered
-            int hoursElapsed = GameTimeStamp.CompareTimestamps (timeWatered, timestamp);
+            int hoursElapsed = GameTimeStamp.CompareTimestamps(timeWatered, timestamp);
             Debug.Log(hoursElapsed + " hours since this was watered");
 
             //Grow the planted crop
-            if(cropPlanted != null)
+            if (cropPlanted != null)
             {
                 cropPlanted.Grow();
             }
 
-            if(hoursElapsed > 24)
+            if (hoursElapsed > 24)
             {
                 SwitchLandStatus(LandStatus.Farmland);
             }

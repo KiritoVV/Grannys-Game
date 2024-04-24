@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -44,9 +42,9 @@ public class PixelizePass : ScriptableRenderPass
         pixelScreenHeight = settings.screenHeight;
         pixelScreenWidth = (int)(pixelScreenHeight * renderingData.cameraData.camera.aspect + 0.5f);
 
-        material.SetVector ("_BLockCount", new Vector2(pixelScreenWidth, pixelScreenHeight));
-        material.SetVector ("_BlockSize", new Vector2(1.0f / pixelScreenWidth, 1.0f / pixelScreenHeight));
-        material.SetVector("_HalfBlockSize", new Vector2 (0.5f / pixelScreenWidth, 0.5f / pixelScreenHeight));
+        material.SetVector("_BLockCount", new Vector2(pixelScreenWidth, pixelScreenHeight));
+        material.SetVector("_BlockSize", new Vector2(1.0f / pixelScreenWidth, 1.0f / pixelScreenHeight));
+        material.SetVector("_HalfBlockSize", new Vector2(0.5f / pixelScreenWidth, 0.5f / pixelScreenHeight));
 
         descriptor.height = pixelScreenHeight;
         descriptor.width = pixelScreenWidth;
@@ -55,7 +53,7 @@ public class PixelizePass : ScriptableRenderPass
         pixelBuffer = new RenderTargetIdentifier(pixelBufferID);
     }
 
-   
+
 
     public override void OnCameraCleanup(CommandBuffer cmd)
     {

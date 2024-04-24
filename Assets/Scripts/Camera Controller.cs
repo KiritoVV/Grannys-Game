@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -8,13 +6,13 @@ public class CameraController : MonoBehaviour
     public float smoothing = -2f;
 
     Transform playerPos;
-    
+
     void Start()
     {
         playerPos = FindObjectOfType<PlayerController>().transform;
     }
 
-   
+
     void Update()
     {
         FollowPlayer();

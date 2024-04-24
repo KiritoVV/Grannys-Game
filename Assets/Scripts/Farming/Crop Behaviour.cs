@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CropBehvaviour : MonoBehaviour
@@ -56,7 +54,7 @@ public class CropBehvaviour : MonoBehaviour
         }
     }
 
-    void SwitchState (CropState stateToSwitch)
+    void SwitchState(CropState stateToSwitch)
     {
         //Reset everything and set all GameObjects to inactive
         seed.SetActive(false);

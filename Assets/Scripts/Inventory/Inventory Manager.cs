@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-   public static InventoryManager Instance { get; private set; }
+    public static InventoryManager Instance { get; private set; }
 
     private void Awake()
     {
-        if(Instance != null && Instance != this )
+        if (Instance != null && Instance != this)
         {
             Destroy(this);
         }
@@ -21,13 +17,13 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    [Header ("Tools")]
+    [Header("Tools")]
     //Tool slots
     public ItemData[] tool = new ItemData[8];
     //Item in the players hand
     public ItemData equippedTool = null;
 
-    [Header ("Items")]
+    [Header("Items")]
     //Item slots
     public ItemData[] items = new ItemData[8];
     //Item in the players hand
@@ -39,7 +35,7 @@ public class InventoryManager : MonoBehaviour
 
     public void InventoryToHand(int slotIndex, InventorySlot.InventoryType inventoryType)
     {
-       if(inventoryType == InventorySlot.InventoryType.Item)
+        if (inventoryType == InventorySlot.InventoryType.Item)
         {
             //Cache the inventory slot itemData from InventoryManager
             ItemData itemToEquip = items[slotIndex];
@@ -68,13 +64,13 @@ public class InventoryManager : MonoBehaviour
 
     //Handles movement of item from hand to inventory
 
-    public  void HandToInventory(InventorySlot.InventoryType inventoryType)
+    public void HandToInventory(InventorySlot.InventoryType inventoryType)
     {
-        if(inventoryType == InventorySlot.InventoryType.Item)
+        if (inventoryType == InventorySlot.InventoryType.Item)
         {
             //Iterate through each inventory slot and find an empty slot
 
-            for(int i =0; i < items.Length; i++)
+            for (int i = 0; i < items.Length; i++)
             {
                 if (items[i] == null)
                 {
@@ -103,7 +99,7 @@ public class InventoryManager : MonoBehaviour
                     break;
                 }
             }
-          
+
         }
 
         UIManager.Instance.RenderInventory();

@@ -44,8 +44,8 @@ public class TimeManager : MonoBehaviour
         while (true)
         {
             Tick();
-            yield return new WaitForSeconds(1/timeScale);
-            
+            yield return new WaitForSeconds(1 / timeScale);
+
         }
     }
 
@@ -61,7 +61,7 @@ public class TimeManager : MonoBehaviour
         }
 
         UpdateSunMovement();
-        
+
     }
 
     void UpdateSunMovement()
@@ -81,8 +81,8 @@ public class TimeManager : MonoBehaviour
     //Get the timestamp
     public GameTimeStamp GetGameTimeStamp()
     {
-       //Return a clone instance
-        return new GameTimeStamp (timestamp);
+        //Return a clone instance
+        return new GameTimeStamp(timestamp);
     }
 
     //Handling Listenners
