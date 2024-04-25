@@ -38,6 +38,11 @@ public class CropBehvaviour : MonoBehaviour
         //Instantiate the harvestable crop
         harvestable = Instantiate(cropToYield.gameModel, transform);
 
+        //Convert days to grow into hours
+        int hoursToGrow = GameTimeStamp.DaysToHours(seedToGrow.DaysToGrow);
+
+        maxGrowth = GameTimeStamp.HoursToMinutes(hoursToGrow);
+
         //Set the inital state to seed
         SwitchState(CropState.Seed);
     }
@@ -47,8 +52,14 @@ public class CropBehvaviour : MonoBehaviour
         //Increase the growth point by 1
         growth++;
 
+        //The seed will sprout into a seedling when the growth is at 50%
+        if(growth >= maxGrowth / 2 && cropState == CropState.Seed)
+        {
+            SwitchState(CropState.Seedling);
+        }
+
         //Fully grown
-        if (growth >= maxGrowth)
+        if (growth >= maxGrowth && cropState == CropState.Seedling)
         {
             SwitchState(CropState.Harvestable);
         }
