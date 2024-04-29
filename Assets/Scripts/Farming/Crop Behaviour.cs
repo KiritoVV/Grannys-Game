@@ -85,6 +85,10 @@ public class CropBehvaviour : MonoBehaviour
             case CropState.Harvestable:
                 //Enable the harvestable GameObject
                 harvestable.SetActive(true);
+                //Unparent it to the crop
+                harvestable.transform.parent = null;
+
+                Destroy(gameObject);
                 break;
         }
     }

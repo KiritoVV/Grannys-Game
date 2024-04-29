@@ -29,6 +29,8 @@ public class InventoryManager : MonoBehaviour
     //Item in the players hand
     public ItemData equippedItem = null;
 
+    public Transform handPoint;
+
     // Equipping
 
     //Handles movement from inventory to hand
@@ -103,6 +105,13 @@ public class InventoryManager : MonoBehaviour
         }
 
         UIManager.Instance.RenderInventory();
+
+    }
+
+    //Render the players equipped item in the scene
+    public void RenderHand()
+    {
+        Instantiate(equippedItem.gameModel, handPoint);
     }
 
 }
