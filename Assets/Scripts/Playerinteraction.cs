@@ -6,6 +6,8 @@ public class Playerinteraction : MonoBehaviour
 
     Land selectedLand = null;
 
+    //The interactable object the player is currently holding
+    InteractableObject SelectedInteractable   = null;
     void Start()
     {
         playerController = transform.parent.GetComponent<PlayerController>();
@@ -32,6 +34,17 @@ public class Playerinteraction : MonoBehaviour
 
             SelectLand(land);
             return;
+        }
+
+        if(other.tag == "Item")
+        {
+            SelectedInteractable = other.GetComponent<InteractableObject>();
+            return;
+        }
+
+        if(SelectedInteractable != null)
+        {
+            SelectedInteractable = null;
         }
 
         if (selectedLand != null)
@@ -63,4 +76,20 @@ public class Playerinteraction : MonoBehaviour
 
         Debug.Log("not on any land");
     }
+
+    //Triggerred when the player presses the item interact button
+    public void ItemInteract()
+    {
+        if(InventoryManager.Instance.equippedItem != null)
+        {
+            InventoryManager.Instance.HandToInventory(InventorySlot.InventoryType.Item);
+            return;
+        }
+
+        if (selectedLand != null)
+        {
+
+        }
+    }
 }
+

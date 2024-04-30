@@ -47,6 +47,8 @@ public class InventoryManager : MonoBehaviour
 
             //Change the hands Slot to the inventory slot
             equippedItem = itemToEquip;
+
+            RenderHand();
         }
         else
         {
@@ -85,6 +87,8 @@ public class InventoryManager : MonoBehaviour
                     break;
                 }
             }
+
+            RenderHand();
         }
         else
         {
@@ -111,7 +115,16 @@ public class InventoryManager : MonoBehaviour
     //Render the players equipped item in the scene
     public void RenderHand()
     {
-        Instantiate(equippedItem.gameModel, handPoint);
+        //Resets objects on the hand
+        if (handPoint.childCount > 0)
+        {
+            Destroy(handPoint.GetChild(0).gameObject);
+        }
+
+       if(equippedItem != null)
+       {
+            Instantiate(equippedItem.gameModel, handPoint);
+       }
     }
 
 }
