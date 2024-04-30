@@ -67,6 +67,13 @@ public class Playerinteraction : MonoBehaviour
 
     public void Interact()
     {
+        //The player should not be able to use his tools when he has his hands full with an item
+        if (InventoryManager.Instance.equippedItem != null)
+        {
+            return;
+        }
+
+
         // Check if the player is selecting any land
         if (selectedLand != null)
         {
@@ -86,9 +93,9 @@ public class Playerinteraction : MonoBehaviour
             return;
         }
 
-        if (selectedLand != null)
+        if (SelectedInteractable != null)
         {
-
+            SelectedInteractable.Pickup();
         }
     }
 }

@@ -6,4 +6,13 @@ public class InteractableObject : MonoBehaviour
 {
     //The item information of the game object
     public ItemData item;
+
+    public void Pickup()
+    {
+        InventoryManager.Instance.equippedItem = item;
+
+        InventoryManager.Instance.RenderHand();
+
+        Destroy(gameObject);
+    }
 }
