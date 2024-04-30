@@ -142,8 +142,18 @@ public class Land : MonoBehaviour, ITimeTracker
             {
                 SwitchLandStatus(LandStatus.Farmland);
             }
+
+        }
+        if(landStatus == LandStatus.Watered && cropPlanted != null)
+        {
+            //If the crop has already germinated, start the withering
+            if(cropPlanted.cropState != CropBehvaviour.CropState.Seed)
+            {
+                cropPlanted.Wither();
+            }
         }
 
 
     }
+
 }
