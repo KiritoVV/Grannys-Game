@@ -99,6 +99,12 @@ public class Land : MonoBehaviour, ITimeTracker
                 case EquipmentData.ToolType.Wateringcan:
                     SwitchLandStatus(LandStatus.Watered);
                     break;
+                case EquipmentData.ToolType.Shovel:
+                    if(cropPlanted != null)
+                    {
+                        Destroy(cropPlanted.gameObject);
+                    }
+                    break;
             }
             return;
         }
@@ -144,7 +150,7 @@ public class Land : MonoBehaviour, ITimeTracker
             }
 
         }
-        if(landStatus == LandStatus.Watered && cropPlanted != null)
+        if(landStatus != LandStatus.Watered && cropPlanted != null)
         {
             //If the crop has already germinated, start the withering
             if(cropPlanted.cropState != CropBehvaviour.CropState.Seed)

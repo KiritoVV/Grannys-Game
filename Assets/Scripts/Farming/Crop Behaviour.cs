@@ -70,7 +70,7 @@ public class CropBehvaviour : MonoBehaviour
         growth++;
 
         //Restore the health of the plant when watered
-        if(health  < maxHealth)
+        if(health < maxHealth)
         {
             health++;
         }
@@ -85,6 +85,16 @@ public class CropBehvaviour : MonoBehaviour
         if (growth >= maxGrowth && cropState == CropState.Seedling)
         {
             SwitchState(CropState.Harvestable);
+        }
+    }
+
+    public void Wither()
+    {
+        health--;
+        //If the  health is below 0  and the crop  has germinated, kill it
+        if (health <= 0 && cropState != CropState.Seed)
+        {
+            SwitchState(CropState.Wilted);
         }
     }
 
@@ -133,15 +143,7 @@ public class CropBehvaviour : MonoBehaviour
         cropState = stateToSwitch;
     }
 
-    public void Wither()
-    {
-        health--;
-        //If the  health is below 0  and the crop  has germinated, kill it
-        if(health <= 0 && cropState != CropState.Seed)
-        {
-            SwitchState(CropState.Wilted);
-        }
-    }
+   
 
     public void Regrow()
     {

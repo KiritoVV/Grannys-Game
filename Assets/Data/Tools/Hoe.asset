@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4648042378e5add44ab6624e246718d9, type: 3}
   m_Name: Hoe
   m_EditorClassIdentifier: 
-  description: 
+  description: Plow the land to grow crops
   thumbnail: {fileID: 1255879240, guid: eecc5121db9958f42ac3be48bcbee1d3, type: 3}
   gameModel: {fileID: 0}
   toolType: 0
