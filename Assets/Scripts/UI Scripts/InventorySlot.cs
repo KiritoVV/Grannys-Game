@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     ItemData itemToDisplay;
+    int quantity;
 
     public Image itemDisplayImage;
 
@@ -16,7 +17,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public InventoryType inventoryType;
 
     int slotIndex;
-    public void Display(ItemData itemToDisplay)
+    public void Display(ItemSlotData itemToDisplay)
     {
         //check if there is an item to display
         if (itemToDisplay != null)

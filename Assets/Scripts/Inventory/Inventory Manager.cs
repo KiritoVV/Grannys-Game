@@ -19,15 +19,15 @@ public class InventoryManager : MonoBehaviour
 
     [Header("Tools")]
     //Tool slots
-    public ItemData[] tool = new ItemData[8];
+    private ItemSlotData[] toolSlots = new ItemSlotData[8];
     //Item in the players hand
-    public ItemData equippedTool = null;
+    private ItemSlotData equippedToolSlots = null;
 
     [Header("Items")]
     //Item slots
-    public ItemData[] items = new ItemData[8];
+    private ItemSlotData[] itemSlots = new ItemSlotData[8];
     //Item in the players hand
-    public ItemData equippedItem = null;
+    private ItemSlotData equippedItemSlots = null;
 
     public Transform handPoint;
 
@@ -37,52 +37,55 @@ public class InventoryManager : MonoBehaviour
 
     public void InventoryToHand(int slotIndex, InventorySlot.InventoryType inventoryType)
     {
+        /*
         if (inventoryType == InventorySlot.InventoryType.Item)
         {
             //Cache the inventory slot itemData from InventoryManager
-            ItemData itemToEquip = items[slotIndex];
+            ItemSlotData itemToEquip = itemSlots[slotIndex];
 
             //Change the inventory Slot to the hands
-            items[slotIndex] = equippedItem;
+            itemSlots[slotIndex] = equippedItemSlots;
 
             //Change the hands Slot to the inventory slot
-            equippedItem = itemToEquip;
+            equippedItemSlots = itemToEquip;
 
             RenderHand();
         }
         else
         {
             //Cache the inventory slot itemData from InventoryManager
-            ItemData toolToEquip = tool[slotIndex];
+            ItemSlotData toolToEquip = toolSlots[slotIndex];
 
             //Change the inventory Slot to the hands
-            tool[slotIndex] = equippedTool;
+            toolSlots[slotIndex] = equippedToolSlots;
 
             //Change the hands Slot to the inventory slot
-            equippedTool = toolToEquip;
+            equippedToolSlots = toolToEquip;
         }
 
         //Update the changes to the ui
-        UIManager.Instance.RenderInventory();
+        UIManager.Instance.RenderInventory();*/
+        
     }
 
     //Handles movement of item from hand to inventory
 
     public void HandToInventory(InventorySlot.InventoryType inventoryType)
     {
+        /*
         if (inventoryType == InventorySlot.InventoryType.Item)
         {
             //Iterate through each inventory slot and find an empty slot
 
-            for (int i = 0; i < items.Length; i++)
+            for (int i = 0; i < itemSlots.Length; i++)
             {
-                if (items[i] == null)
+                if (itemSlots[i] == null)
                 {
                     //Sends the equipped item over to its new slot
-                    items[i] = equippedItem;
+                    itemSlots[i] = equippedItemSlots;
 
                     //Remove the item from the hand
-                    equippedItem = null;
+                    equippedItemSlots = null;
 
                     break;
                 }
@@ -92,15 +95,15 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < tool.Length; i++)
+            for (int i = 0; i < toolSlots.Length; i++)
             {
-                if (tool[i] == null)
+                if (toolSlots[i] == null)
                 {
                     //Sends the equipped Tool over to its new slot
-                    tool[i] = equippedTool;
+                    toolSlots[i] = equippedToolSlots;
 
                     //Remove the Tool from the hand
-                    equippedTool = null;
+                    equippedToolSlots = null;
 
                     break;
                 }
@@ -108,7 +111,7 @@ public class InventoryManager : MonoBehaviour
 
         }
 
-        UIManager.Instance.RenderInventory();
+        UIManager.Instance.RenderInventory(); */
 
     }
 
@@ -121,10 +124,30 @@ public class InventoryManager : MonoBehaviour
             Destroy(handPoint.GetChild(0).gameObject);
         }
 
-       if(equippedItem != null)
+       if(equippedItemSlots != null)
        {
-            Instantiate(equippedItem.gameModel, handPoint);
+            Instantiate(GetEquippedSlotItem(InventorySlot.InventoryType.Item).gameModel, handPoint);
        }
+    }
+
+    //Inventory Slot Data
+
+    public ItemData GetEquippedSlotItem(InventorySlot.InventoryType inventoryType)
+    {
+        if(inventoryType == InventorySlot.InventoryType.Item)
+        {
+            return equippedItemSlots.itemData;
+        }
+        return equippedItemSlots.itemData;
+    }
+
+    public ItemSlotData GetEquippedSlot(InventorySlot.InventoryType inventoryType)
+    {
+        if(inventoryType == InventorySlot.InventoryType.Item)
+        {
+            return equippedItemSlots;
+        }
+        return equippedItemSlots;
     }
 
 }

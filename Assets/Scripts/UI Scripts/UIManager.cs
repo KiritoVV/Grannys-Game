@@ -69,10 +69,10 @@ public class UIManager : MonoBehaviour, ITimeTracker
     public void RenderInventory()
     {
         // Get the inventory tool slots from inventory manager
-        ItemData[] inventoryToolSlot = InventoryManager.Instance.tool;
+        ItemData[] inventoryToolSlot = InventoryManager.Instance.toolSlots;
 
         // Get the inventory item slots from the inventory manager
-        ItemData[] inventoryItemSlot = InventoryManager.Instance.items;
+        ItemData[] inventoryItemSlot = InventoryManager.Instance.itemSlots;
 
 
         // Render the tool section
@@ -82,13 +82,13 @@ public class UIManager : MonoBehaviour, ITimeTracker
         RenderInventoryPanel(inventoryItemSlot, itemSlots);
 
         //Tender the equipped slot
-        toolHandSlot.Display(InventoryManager.Instance.equippedTool);
-        itemHandSlot.Display(InventoryManager.Instance.equippedItem);
+        toolHandSlot.Display(InventoryManager.Instance.equippedToolSlots);
+        itemHandSlot.Display(InventoryManager.Instance.equippedItemSlots);
 
 
 
         //Get Tool Equip from InventoryManager
-        ItemData equippedTool = InventoryManager.Instance.equippedTool;
+        ItemData equippedTool = InventoryManager.Instance.equippedToolSlots;
         //check if there is an item to display
 
         if (equippedTool != null)

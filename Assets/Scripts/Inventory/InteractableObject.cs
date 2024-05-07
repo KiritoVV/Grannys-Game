@@ -9,7 +9,7 @@ public class InteractableObject : MonoBehaviour
 
     public virtual void Pickup()
     {
-        InventoryManager.Instance.equippedItem = item;
+        InventoryManager.Instance.equippedItemSlots = item;
 
         InventoryManager.Instance.RenderHand();
 

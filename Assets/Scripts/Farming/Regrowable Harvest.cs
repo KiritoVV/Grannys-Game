@@ -14,7 +14,7 @@ public class RegrowableHarvest : InteractableObject
     public override void Pickup()
     {
         //Sets the players inventory to the item
-        InventoryManager.Instance.equippedItem = item;
+        InventoryManager.Instance.equippedItemSlots = item;
         //Update the changes in the scene
         InventoryManager.Instance.RenderHand();
 

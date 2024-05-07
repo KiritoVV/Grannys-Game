@@ -76,7 +76,7 @@ public class Land : MonoBehaviour, ITimeTracker
     public void Interact()
     {
         //Checks the players tool slot
-        ItemData toolSlot = InventoryManager.Instance.equippedTool;
+        ItemData toolSlot = InventoryManager.Instance.equippedToolSlots;
 
         if (toolSlot == null)
         {
