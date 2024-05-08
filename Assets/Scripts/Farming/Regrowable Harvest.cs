@@ -6,6 +6,7 @@ public class RegrowableHarvest : InteractableObject
 {
     CropBehvaviour parentCrop;
 
+    //Sets the parent crop
     public void SetParent(CropBehvaviour parentCrop)
     {
         this.parentCrop = parentCrop;
@@ -13,12 +14,14 @@ public class RegrowableHarvest : InteractableObject
 
     public override void Pickup()
     {
-        //Sets the players inventory to the item
-        InventoryManager.Instance.equippedItemSlots = item;
+        //Set the player's inventory to the item
+        InventoryManager.Instance.EquipHandSlot(item);
+
         //Update the changes in the scene
         InventoryManager.Instance.RenderHand();
 
-        //Set the  parents crop back to seedling to regrow it 
+        //Set the parent crop back to seedling to regrow it
         parentCrop.Regrow();
+
     }
 }

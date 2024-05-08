@@ -4,45 +4,47 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour, ITimeTracker
 {
     public static UIManager Instance { get; private set; }
-
     [Header("Status Bar")]
-    //Tool equip slot on the status
+    //Tool equip slot on the status bar
     public Image toolEquipSlot;
-
-    //Time ui
+    //Tool Quantity text on the status bar 
+    public Text toolQuantityText;
+    //Time UI
     public Text timeText;
     public Text dateText;
 
-    [Header("Inventory system")]
 
-    //The item slot ui
-    public InventorySlot[] toolSlots;
-
-    //The tool equip slot UI on the inventory panel
-    public HandInventorySlot toolHandSlot;
-
-    // The tool slots ui
-    public InventorySlot[] itemSlots;
-
-    //The item equip slot UI on the inventory panel
-    public HandInventorySlot itemHandSlot;
-
-    //The inventory Panel
+    [Header("Inventory System")]
+    //The inventory panel
     public GameObject inventoryPanel;
 
-    //Item infro box
+    //The tool equip slot UI on the Inventory panel
+    public HandInventorySlot toolHandSlot;
+
+    //The tool slot UIs
+    public InventorySlot[] toolSlots;
+
+    //The item equip slot UI on the Inventory panel
+    public HandInventorySlot itemHandSlot;
+
+    //The item slot UIs
+    public InventorySlot[] itemSlots;
+
+    //Item info box
     public Text itemNameText;
     public Text itemDescriptionText;
 
+
     private void Awake()
     {
+        //If there is more than one instance, destroy the extra
         if (Instance != null && Instance != this)
         {
             Destroy(this);
         }
         else
         {
-            // Set the static instance to this instance
+            //Set the static instance to this instance
             Instance = this;
         }
     }
@@ -52,11 +54,11 @@ public class UIManager : MonoBehaviour, ITimeTracker
         RenderInventory();
         AssignSlotIndexes();
 
-        //Add UiManager to the list of objects TimeManager will notify when the time update
+        //Add UIManager to the list of objects TimeManager will notify when the time updates
         TimeManager.Instance.Registertracker(this);
     }
 
-    //Iterate through the slot ui elements and assign its reference slot index
+    //Iterate through the slot UI elements and assign it its reference slot index
     public void AssignSlotIndexes()
     {
         for (int i = 0; i < toolSlots.Length; i++)
@@ -66,48 +68,54 @@ public class UIManager : MonoBehaviour, ITimeTracker
         }
     }
 
+    //Render the inventory screen to reflect the Player's Inventory. 
     public void RenderInventory()
     {
-        // Get the inventory tool slots from inventory manager
-        ItemData[] inventoryToolSlot = InventoryManager.Instance.toolSlots;
+        //Get the respective slots to process
+        ItemSlotData[] inventoryToolSlots = InventoryManager.Instance.GetInventorySlots(InventorySlot.InventoryType.Tool);
+        ItemSlotData[] inventoryItemSlots = InventoryManager.Instance.GetInventorySlots(InventorySlot.InventoryType.Item);
 
-        // Get the inventory item slots from the inventory manager
-        ItemData[] inventoryItemSlot = InventoryManager.Instance.itemSlots;
+        //Render the Tool section
+        RenderInventoryPanel(inventoryToolSlots, toolSlots);
 
+        //Render the Item section
+        RenderInventoryPanel(inventoryItemSlots, itemSlots);
 
-        // Render the tool section
-        RenderInventoryPanel(inventoryToolSlot, toolSlots);
-
-        //Render the item section
-        RenderInventoryPanel(inventoryItemSlot, itemSlots);
-
-        //Tender the equipped slot
-        toolHandSlot.Display(InventoryManager.Instance.equippedToolSlots);
-        itemHandSlot.Display(InventoryManager.Instance.equippedItemSlots);
-
-
+        //Render the equipped slots
+        toolHandSlot.Display(InventoryManager.Instance.GetEquippedSlot(InventorySlot.InventoryType.Tool));
+        itemHandSlot.Display(InventoryManager.Instance.GetEquippedSlot(InventorySlot.InventoryType.Item));
 
         //Get Tool Equip from InventoryManager
-        ItemData equippedTool = InventoryManager.Instance.equippedToolSlots;
-        //check if there is an item to display
+        ItemData equippedTool = InventoryManager.Instance.GetEquippedSlotItem(InventorySlot.InventoryType.Tool);
 
+        //Text should be empty by default
+        toolQuantityText.text = "";
+        //Check if there is an item to display
         if (equippedTool != null)
         {
+            //Switch the thumbnail over
             toolEquipSlot.sprite = equippedTool.thumbnail;
 
             toolEquipSlot.gameObject.SetActive(true);
 
+            //Get quantity 
+            int quantity = InventoryManager.Instance.GetEquippedSlot(InventorySlot.InventoryType.Tool).quantity;
+            if (quantity > 1)
+            {
+                toolQuantityText.text = quantity.ToString();
+            }
             return;
-
         }
 
         toolEquipSlot.gameObject.SetActive(false);
     }
 
-    void RenderInventoryPanel(ItemData[] slots, InventorySlot[] uiSlots)
+    //Iterate through a slot in a section and display them in the UI
+    void RenderInventoryPanel(ItemSlotData[] slots, InventorySlot[] uiSlots)
     {
         for (int i = 0; i < uiSlots.Length; i++)
         {
+            //Display them accordingly
             uiSlots[i].Display(slots[i]);
         }
     }
@@ -120,13 +128,15 @@ public class UIManager : MonoBehaviour, ITimeTracker
         RenderInventory();
     }
 
-    //Display item info on the item infobox
-    public void DisplayeItemInfo(ItemData data)
+    //Display Item info on the Item infobox
+    public void DisplayItemInfo(ItemData data)
     {
+        //If data is null, reset
         if (data == null)
         {
             itemNameText.text = "";
             itemDescriptionText.text = "";
+
             return;
         }
 
@@ -134,33 +144,36 @@ public class UIManager : MonoBehaviour, ITimeTracker
         itemDescriptionText.text = data.description;
     }
 
+    //Callback to handle the UI for time
     public void ClockUpdate(GameTimeStamp timestamp)
     {
-        //Handle the time 
-
+        //Handle the time
         //Get the hours and minutes
         int hours = timestamp.hour;
         int minutes = timestamp.minute;
 
-        //Am or Pm
+        //AM or PM
         string prefix = "AM ";
 
-        //Convert  hours to 12 hours clock
+        //Convert hours to 12 hour clock
         if (hours > 12)
         {
-            //Time becomes Pm
+            //Time becomes PM 
             prefix = "PM ";
-            hours = 12;
+            hours = hours - 12;
+            Debug.Log(hours);
         }
 
+        //Format it for the time text display
         timeText.text = prefix + hours + ":" + minutes.ToString("00");
 
-        //Handle the date
+        //Handle the Date
         int day = timestamp.day;
         string season = timestamp.season.ToString();
         string dayOfTheWeek = timestamp.GetDayOfTheWeek().ToString();
 
         //Format it for the date text display
-        dateText.text = season + " " + day + " (" + dayOfTheWeek + ") ";
+        dateText.text = season + " " + day + " (" + dayOfTheWeek + ")";
+
     }
 }

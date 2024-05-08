@@ -8,50 +8,70 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     int quantity;
 
     public Image itemDisplayImage;
+    public Text quantityText;
 
     public enum InventoryType
     {
         Item, Tool
     }
-
+    //Determines which inventory section this slot is apart of.
     public InventoryType inventoryType;
 
     int slotIndex;
-    public void Display(ItemSlotData itemToDisplay)
+
+    public void Display(ItemSlotData itemSlot)
     {
-        //check if there is an item to display
+        //Set the variables accordingly 
+        itemToDisplay = itemSlot.itemData;
+        quantity = itemSlot.quantity;
+
+        //By default, the quantity text should not show
+        quantityText.text = "";
+
+        //Check if there is an item to display
         if (itemToDisplay != null)
         {
+            //Switch the thumbnail over
             itemDisplayImage.sprite = itemToDisplay.thumbnail;
-            this.itemToDisplay = itemToDisplay;
+
+            //Display the stack quantity if there is more than 1 in the stack
+            if (quantity > 1)
+            {
+                quantityText.text = quantity.ToString();
+            }
+
             itemDisplayImage.gameObject.SetActive(true);
 
             return;
-
         }
 
         itemDisplayImage.gameObject.SetActive(false);
+
+
     }
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        //Moves item from inventory to hand
+        //Move item from inventory to hand
         InventoryManager.Instance.InventoryToHand(slotIndex, inventoryType);
     }
 
+    //Set the Slot index
     public void AssignIndex(int slotIndex)
     {
         this.slotIndex = slotIndex;
     }
 
-    public void OnPointerEnter(PointerEventData eventdata)
+
+    //Display the item info on the item info box when the player mouses over
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        UIManager.Instance.DisplayeItemInfo(itemToDisplay);
+        UIManager.Instance.DisplayItemInfo(itemToDisplay);
     }
 
-    public void OnPointerExit(PointerEventData eventdata)
+    //Reset the item info box when the player leaves
+    public void OnPointerExit(PointerEventData eventData)
     {
-        UIManager.Instance.DisplayeItemInfo(null);
-
+        UIManager.Instance.DisplayItemInfo(null);
     }
 }

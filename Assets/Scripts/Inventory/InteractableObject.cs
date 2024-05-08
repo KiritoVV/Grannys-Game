@@ -9,7 +9,8 @@ public class InteractableObject : MonoBehaviour
 
     public virtual void Pickup()
     {
-        InventoryManager.Instance.equippedItemSlots = item;
+        //Sets the players inventory to the item
+        InventoryManager.Instance.EquipHandSlot(item);
 
         InventoryManager.Instance.RenderHand();
 
