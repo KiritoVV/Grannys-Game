@@ -1,6 +1,6 @@
-using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -19,6 +19,9 @@ public class InventoryManager : MonoBehaviour
             Instance = this;
         }
     }
+
+    //The full list of items 
+    public ItemIndex itemIndex;
 
     [Header("Tools")]
     //Tool Slots

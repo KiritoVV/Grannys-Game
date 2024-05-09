@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RegrowableHarvest : InteractableObject
+public class RegrowableHarvestBehaviour : InteractableObject
 {
-    CropBehvaviour parentCrop;
+    CropBehaviour parentCrop;
 
     //Sets the parent crop
-    public void SetParent(CropBehvaviour parentCrop)
+    public void SetParent(CropBehaviour parentCrop)
     {
         this.parentCrop = parentCrop;
     }

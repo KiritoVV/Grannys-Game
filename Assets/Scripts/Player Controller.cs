@@ -1,42 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Movement components
-
+    //Movement Components
     private CharacterController controller;
     private Animator animator;
 
-    private float moveSpeed = 4.0f;
+    private float moveSpeed = 4f;
 
-    [Header("Movement system")]
+    [Header("Movement System")]
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
 
-    //Interaction Components
-    Playerinteraction playerinteraction;
 
+    //Interaction components
+    Playerinteraction playerInteraction;
 
+    // Start is called before the first frame update
     void Start()
     {
-        // get movement components
+        //Get movement components
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
 
-        playerinteraction = GetComponentInChildren<Playerinteraction>();
+        //Get interaction component
+        playerInteraction = GetComponentInChildren<Playerinteraction>();
+
     }
 
-
+    // Update is called once per frame
     void Update()
     {
-        // Runs the functions that handle all movements
+        //Runs the function that handles all movement
         Move();
 
-        //Runs the function that hand;es all interaction
+        //Runs the function that handles all interaction
         Interact();
 
-        //Debugging purposes only
-        if (Input.GetKey(KeyCode.RightBracket))
+        if(Input.GetKey(KeyCode.RightBracket))
         {
             TimeManager.Instance.Tick();
         }
@@ -45,47 +48,46 @@ public class PlayerController : MonoBehaviour
 
     public void Interact()
     {
+        //Tool interaction
         if (Input.GetButtonDown("Fire1"))
         {
             //Interact
-            playerinteraction.Interact();
+            playerInteraction.Interact();
         }
 
-        if(Input.GetButtonDown("Fire2"))
-        {
-            playerinteraction.ItemInteract();
-        }
-
+        //TODO: Set up item interaction
     }
+
+
     public void Move()
     {
-        //Gets the horizontal and vertical inputs as a number
+        //Get the horizontal and vertical inputs as a number
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-
-        //Directions in a normalised vector
+        //Direction in a normalised vector
         Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
         Vector3 velocity = moveSpeed * Time.deltaTime * dir;
 
-        //Is the sprint key pressesd
+        //Is the sprint key pressed down?
         if (Input.GetButton("Sprint"))
         {
-            //Set the animation to run and increase the speed
+            //Set the animation to run and increase our movespeed
             moveSpeed = runSpeed;
             animator.SetBool("Running", true);
         }
         else
         {
+            //Set the animation to walk and decrease our movespeed
             moveSpeed = walkSpeed;
             animator.SetBool("Running", false);
         }
 
 
-        // Check if there is any movement
+        //Check if there is movement
         if (dir.magnitude >= 0.1f)
         {
-            //Look towards that directions
+            //Look towards that direction
             transform.rotation = Quaternion.LookRotation(dir);
 
             //Move
@@ -95,5 +97,8 @@ public class PlayerController : MonoBehaviour
 
         //Animation speed parameter
         animator.SetFloat("Speed", velocity.magnitude);
+
+
+
     }
 }

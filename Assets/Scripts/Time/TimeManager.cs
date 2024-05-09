@@ -70,9 +70,7 @@ public class TimeManager : MonoBehaviour
         //Convert the current time to minutes
         int timeInMinutes = GameTimeStamp.HoursToMinutes(timestamp.hour) + timestamp.minute;
 
-        //Sun moves 15 degrees in an hour
-        //0.25 degrees in a minute
-        // At midnight (0:00), the angle of the sun should be -90
+        
         float sunAngle = .25f * timeInMinutes - 90;
 
         sunTransform.eulerAngles = new Vector3(sunAngle, 0, 0);
@@ -85,9 +83,7 @@ public class TimeManager : MonoBehaviour
         return new GameTimeStamp(timestamp);
     }
 
-    //Handling Listenners
-
-    //Add the object to the list of listeners
+    
     public void Registertracker(ITimeTracker listener)
     {
         listeners.Add(listener);
