@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4648042378e5add44ab6624e246718d9, type: 3}
   m_Name: Watering Can
   m_EditorClassIdentifier: 
-  description: Waters the seeds for crops to grow
+  description: Water the seed for crop to grow (everyday)
   thumbnail: {fileID: 21300000, guid: c5da4247c4b31de46b472e4037f78e18, type: 3}
   gameModel: {fileID: 0}
   toolType: 1
