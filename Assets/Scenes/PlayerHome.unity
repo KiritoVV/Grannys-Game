@@ -1454,6 +1454,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680276920}
   m_Mesh: {fileID: -1072502390566249872, guid: bbe14f3ff3ca9244e9448675552607f1, type: 3}
+--- !u!1 &1852302470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4953394663389161367, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
+  m_PrefabInstance: {fileID: 1965174215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937078597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Essentials
       objectReference: {fileID: 0}
+    - target: {fileID: 4210413755663362315, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
+      propertyPath: inventoryPanel
+      value: 
+      objectReference: {fileID: 1852302470}
     - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
       propertyPath: m_RootOrder
       value: 1
