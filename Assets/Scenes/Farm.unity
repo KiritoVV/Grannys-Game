@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 705507994}
+  m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.56158954, g: 0.7218089, b: 0.817857, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 034f752485b2b2a4db9dc199a4823120, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -388,6 +388,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1128037813}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &13884347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -642,6 +646,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 469039241}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &21657356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -956,6 +964,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 420856816}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &33226332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1525,6 +1537,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1697436784}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &64732342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1885,6 +1901,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1409441947}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &75978603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3203,7 +3223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149258782}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: -57.6, y: 1.7633839, z: -6.02}
+  m_LocalPosition: {x: -23.382908, y: 0, z: -40.922226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3219,8 +3239,8 @@ Transform:
   - {fileID: 1128486050}
   - {fileID: 1494118840}
   - {fileID: 1598245404}
-  m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_Father: {fileID: 1698241810}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &149447512
 GameObject:
@@ -3457,7 +3477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156104258}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: 22.8, y: 1.7633839, z: 55.9}
+  m_LocalPosition: {x: 57.01709, y: 0, z: 20.997776}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3473,8 +3493,8 @@ Transform:
   - {fileID: 1587709013}
   - {fileID: 292028806}
   - {fileID: 915651738}
-  m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_Father: {fileID: 1698241810}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &164184394
 GameObject:
@@ -3658,6 +3678,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1050840093}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &172830409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3912,6 +3936,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1773049743}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &177853760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5201,6 +5229,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 261231311}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &230516118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5349,6 +5381,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1178710024}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &237146331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6538,6 +6574,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1454703312}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &306257171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7821,6 +7861,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 817366832}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &367924072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8686,6 +8730,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 905658805}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &398178101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10094,6 +10142,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 335722666}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &459018961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11541,6 +11593,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 300518264}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &519370279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13783,6 +13839,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 2053061798}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &617149345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14266,7 +14326,7 @@ Transform:
   - {fileID: 917363178}
   - {fileID: 1909453382}
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &635321241
 MonoBehaviour:
@@ -14528,6 +14588,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 11355446}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &653169650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14864,6 +14928,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1991992838}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &677083731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15411,6 +15479,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 2138513413}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &698947985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15565,11 +15637,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702292170}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!108 &705507994 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 8960619965394902772, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-  m_PrefabInstance: {fileID: 3984785934864682378}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &708309803
 GameObject:
   m_ObjectHideFlags: 0
@@ -16953,7 +17020,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a2c126ee237ac334399af57c94387403, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2c126ee237ac334399af57c94387403, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17353,6 +17420,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 702292170}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &829848440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17585,6 +17656,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 849467705}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &843333901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19097,6 +19172,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 378407640}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &899003645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19213,7 +19292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902148327}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: -27.2, y: 1.7633839, z: 40.2}
+  m_LocalPosition: {x: 7.01709, y: 0, z: 5.2977753}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19229,8 +19308,8 @@ Transform:
   - {fileID: 199423870}
   - {fileID: 1670517652}
   - {fileID: 2076476045}
-  m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_Father: {fileID: 1698241810}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &905658805
 GameObject:
@@ -19657,7 +19736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917235356}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: 6.87, y: 1.7633839, z: 40.2}
+  m_LocalPosition: {x: 41.08709, y: 0, z: 5.2977753}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19673,8 +19752,8 @@ Transform:
   - {fileID: 1216107993}
   - {fileID: 203116985}
   - {fileID: 491210704}
-  m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_Father: {fileID: 1698241810}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &917363177
 GameObject:
@@ -20428,7 +20507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972102021}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: -58.2, y: 1.7633839, z: 36.3}
+  m_LocalPosition: {x: -23.98291, y: 0, z: 1.3977737}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20444,8 +20523,8 @@ Transform:
   - {fileID: 871246896}
   - {fileID: 1988192759}
   - {fileID: 1611109710}
-  m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_Father: {fileID: 1698241810}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &985599590
 GameObject:
@@ -21877,6 +21956,124 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067652257}
   m_Mesh: {fileID: -3940724484685946264, guid: b23a8d399f3407545abe7d47aa169c08, type: 3}
+--- !u!1 &1071697645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1071697648}
+  - component: {fileID: 1071697647}
+  - component: {fileID: 1071697646}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1071697646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071697645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &1071697647
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071697645}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.90961653, b: 0.745283, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 2
+  m_AreaSize: {x: 0.5, y: 0.5}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6000
+  m_UseColorTemperature: 1
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1071697648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071697645}
+  m_LocalRotation: {x: 0.22529197, y: -0.7662664, z: 0.35568896, w: 0.48535007}
+  m_LocalPosition: {x: 0.63000107, y: 3, z: 0.20000005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 49.8, y: -115.3, z: 0}
 --- !u!1 &1075741662
 GameObject:
   m_ObjectHideFlags: 0
@@ -22219,7 +22416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090084043}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: -57.6, y: 1.7633839, z: -20.47}
+  m_LocalPosition: {x: -23.382908, y: 0, z: -55.372223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22235,8 +22432,8 @@ Transform:
   - {fileID: 1320538973}
   - {fileID: 1400119197}
   - {fileID: 802955011}
-  m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_Father: {fileID: 1698241810}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1094741042
 GameObject:
@@ -23762,6 +23959,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 426087302}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1191227545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24016,6 +24217,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 722622494}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1212833987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24458,6 +24663,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 442631946}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1220723069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24739,6 +24948,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1455319475}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1230171652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25434,6 +25647,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 690602231}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1278839695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26611,6 +26828,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 886283529}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1340226344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27136,6 +27357,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 587484227}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1358877554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28272,6 +28497,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1254373949}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1441305870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28441,6 +28670,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 473038683}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 0
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1450820055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29050,6 +29283,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1109051405}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1460790847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30025,6 +30262,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 27323253}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1507380606
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30194,6 +30435,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 2046727226}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1511994600
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32835,6 +33080,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1927084122}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1621159390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34220,6 +34469,13 @@ Transform:
   - {fileID: 1999797252}
   - {fileID: 2044225741}
   - {fileID: 131782330}
+  - {fileID: 149258783}
+  - {fileID: 1090084044}
+  - {fileID: 902148328}
+  - {fileID: 917235357}
+  - {fileID: 1847073007}
+  - {fileID: 972102022}
+  - {fileID: 156104259}
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34405,6 +34661,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1110547545}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1729960338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35564,6 +35824,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1668169487}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1788296315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36043,6 +36307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1819216883}
   - component: {fileID: 1819216884}
+  - component: {fileID: 1819216885}
   m_Layer: 0
   m_Name: Farming Area
   m_TagString: Untagged
@@ -36117,6 +36382,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8909c04320c4541bc582b6315ffbc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1819216885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819216882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0268400176822f46ad2e90a938f608d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentageFilled: 50
 --- !u!1 &1819729077
 GameObject:
   m_ObjectHideFlags: 0
@@ -36436,7 +36714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847073006}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00000058114523}
-  m_LocalPosition: {x: 23.74, y: 1.7633839, z: 32.56}
+  m_LocalPosition: {x: 57.957092, y: 0, z: -2.3422241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36452,8 +36730,8 @@ Transform:
   - {fileID: 1061683772}
   - {fileID: 386183421}
   - {fileID: 794253824}
-  m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_Father: {fileID: 1698241810}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1874450755
 GameObject:
@@ -36880,6 +37158,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 581745058}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1880047614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38078,6 +38360,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1247042805}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1940450934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38608,6 +38894,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 854299623}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &1966584712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40731,6 +41021,10 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 946941440}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
+  obstacleStatus: 1
+  rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
+  woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
+  weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
 --- !u!65 &2058855815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46763,109 +47057,6 @@ Transform:
   m_Father: {fileID: 543450652559918474}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3984785934864682378
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2425327457443622437, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70710737
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425327457443622437, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071063
-      objectReference: {fileID: 0}
-    - target: {fileID: 2425327457443622437, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2778781521243228844, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_Height
-      value: 2.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2778781521243228844, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_SlopeLimit
-      value: 45.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 3507838969144531839, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_Name
-      value: Essentials
-      objectReference: {fileID: 0}
-    - target: {fileID: 3507838969144531839, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_RootOrder
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -29.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.456352
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 28.3526
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149582855621152897, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5300488837384861449, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 81b1a418f2570d640bd81763bf271044, type: 3}
-    - target: {fileID: 5300488837384861449, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 85cac528d321b65439a3c50b22997576, type: 2}
-    - target: {fileID: 5300488837384861449, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7106590445491734128, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7121292521144620912, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-    - {fileID: 7704053428382146831, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 48b2e545807326949a8a5a43022f7afc, type: 3}
 --- !u!33 &3994744876641846909
 MeshFilter:
   m_ObjectHideFlags: 0

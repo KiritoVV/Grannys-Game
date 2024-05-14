@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static CropBehaviour;
 
 [System.Serializable]
 public struct CropSaveState
@@ -23,14 +22,17 @@ public struct CropSaveState
         this.health = health;
     }
 
+    //The crop will grow when watered
     public void Grow()
     {
         //Increase the growth point by 1
         growth++;
 
-        SeedData seedInfo = (SeedData) InventoryManager.Instance.itemIndex.GetItemFromString(seedToGrow);
-        int maxGrowth = GameTimeStamp.HoursToMinutes(GameTimeStamp.DaysToHours(seedInfo.daysToRegrow));
-        int maxHealth = GameTimeStamp.HoursToMinutes(48);
+        //Convert the seedToGrow string into SeedData
+        SeedData seedInfo = (SeedData)InventoryManager.Instance.itemIndex.GetItemFromString(seedToGrow);
+        //Get the max health and growth from the seed data
+        int maxGrowth = GameTimestamp.HoursToMinutes(GameTimestamp.DaysToHours(seedInfo.DaysToGrow));
+        int maxHealth = GameTimestamp.HoursToMinutes(48);
 
         //Restore the health of the plant when it is watered
         if (health < maxHealth)
@@ -49,14 +51,14 @@ public struct CropSaveState
         {
             cropState = CropBehaviour.CropState.Harvestable;
         }
-
     }
 
+    //The crop will progressively wither when the soil is dry 
     public void Wither()
     {
         health--;
-
-        if(health <=0 && cropState != CropBehaviour.CropState.Seed)
+        //If the health is below 0 and the crop has germinated, kill it
+        if (health <= 0 && cropState != CropBehaviour.CropState.Seed)
         {
             cropState = CropBehaviour.CropState.Wilted;
         }

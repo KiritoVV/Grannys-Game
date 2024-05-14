@@ -1,18 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Item/Item")]
+[CreateAssetMenu(menuName = "Items/Item")]
 public class ItemData : ScriptableObject
 {
     public string description;
 
-    //icon to be displated in ui
+    //Icon to be displayed in UI
     public Sprite thumbnail;
 
-    //Gameobject to be shown in the scene
+    //GameObject to be shown in the scene
     public GameObject gameModel;
 
-
-
-
-
+    public int cost;
 }

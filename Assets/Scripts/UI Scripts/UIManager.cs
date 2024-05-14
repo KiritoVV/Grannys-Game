@@ -32,13 +32,23 @@ public class UIManager : MonoBehaviour, ITimeTracker
     //The item slot UIs
     public InventorySlot[] itemSlots;
 
-    //Item info box
+    [Header("Item info box")]
+    public GameObject itemInfoBox;
     public Text itemNameText;
     public Text itemDescriptionText;
 
     [Header("Screen Transitions")]
     public GameObject fadeIn;
     public GameObject fadeOut;
+
+    [Header("Yes No Prompt")]
+    public YesNoPrompt yesNoPrompt;
+
+    [Header("Player Stats")]
+    public Text moneyText;
+
+    [Header("Shop")]
+    public ShopListingManager shopListingManager;
 
 
     private void Awake()
@@ -59,10 +69,21 @@ public class UIManager : MonoBehaviour, ITimeTracker
     {
         RenderInventory();
         AssignSlotIndexes();
+        RenderPlayerStats();
+        DisplayItemInfo(null);
 
         //Add UIManager to the list of objects TimeManager will notify when the time updates
-        TimeManager.Instance.Registertracker(this);
+        TimeManager.Instance.RegisterTracker(this);
     }
+
+    public void TriggerYesNoPrompt(string message, System.Action onYesCallback)
+    {
+        //Set active the gameobject of the Yes No Prompt
+        yesNoPrompt.gameObject.SetActive(true);
+
+        yesNoPrompt.CreatePrompt(message, onYesCallback);
+    }
+
     #region Fadein Fadeout Transitions
 
     public void FadeOutScreen()
@@ -91,6 +112,8 @@ public class UIManager : MonoBehaviour, ITimeTracker
 
 
     #endregion
+
+    #region Inventory
     //Iterate through the slot UI elements and assign it its reference slot index
     public void AssignSlotIndexes()
     {
@@ -169,16 +192,18 @@ public class UIManager : MonoBehaviour, ITimeTracker
         {
             itemNameText.text = "";
             itemDescriptionText.text = "";
-
+            itemInfoBox.SetActive(false);
             return;
         }
-
+        itemInfoBox.SetActive(true);
         itemNameText.text = data.name;
         itemDescriptionText.text = data.description;
     }
+    #endregion
 
+    #region Time
     //Callback to handle the UI for time
-    public void ClockUpdate(GameTimeStamp timestamp)
+    public void ClockUpdate(GameTimestamp timestamp)
     {
         //Handle the time
         //Get the hours and minutes
@@ -208,5 +233,20 @@ public class UIManager : MonoBehaviour, ITimeTracker
         //Format it for the date text display
         dateText.text = season + " " + day + " (" + dayOfTheWeek + ")";
 
+    }
+    #endregion
+
+    //Render the UI of the player stats in the HUD
+    public void RenderPlayerStats()
+    {
+        moneyText.text = PlayerStats.Money + PlayerStats.CURRENCY;
+    }
+
+    //Open the shop window with the shop items listed
+    public void OpenShop(List<ItemData> shopItems)
+    {
+        //Set active the shop window
+        shopListingManager.gameObject.SetActive(true);
+        shopListingManager.RenderShop(shopItems);
     }
 }

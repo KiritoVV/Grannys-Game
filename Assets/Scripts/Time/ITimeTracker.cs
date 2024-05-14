@@ -1,4 +1,4 @@
 public interface ITimeTracker
 {
-    void ClockUpdate(GameTimeStamp timestamp);
+    void ClockUpdate(GameTimestamp timestamp);
 }

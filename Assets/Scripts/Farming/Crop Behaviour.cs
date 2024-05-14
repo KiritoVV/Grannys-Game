@@ -23,7 +23,7 @@ public class CropBehaviour : MonoBehaviour
     int maxGrowth;
 
     //The crop can stay alive for 48 hours without water before it dies
-    int maxHealth = GameTimeStamp.HoursToMinutes(48);
+    int maxHealth = GameTimestamp.HoursToMinutes(48);
 
     int health;
 
@@ -59,9 +59,9 @@ public class CropBehaviour : MonoBehaviour
         harvestable = Instantiate(cropToYield.gameModel, transform);
 
         //Convert Days To Grow into hours
-        int hoursToGrow = GameTimeStamp.DaysToHours(seedToGrow.DaysToGrow);
+        int hoursToGrow = GameTimestamp.DaysToHours(seedToGrow.DaysToGrow);
         //Convert it to minutes
-        maxGrowth = GameTimeStamp.HoursToMinutes(hoursToGrow);
+        maxGrowth = GameTimestamp.HoursToMinutes(hoursToGrow);
 
         //Set the growth and health accordingly
         this.growth = growth;
@@ -183,8 +183,8 @@ public class CropBehaviour : MonoBehaviour
     {
         //Reset the growth 
         //Get the regrowth time in hours
-        int hoursToRegrow = GameTimeStamp.DaysToHours(seedToGrow.daysToRegrow);
-        growth = maxGrowth - GameTimeStamp.HoursToMinutes(hoursToRegrow);
+        int hoursToRegrow = GameTimestamp.DaysToHours(seedToGrow.daysToRegrow);
+        growth = maxGrowth - GameTimestamp.HoursToMinutes(hoursToRegrow);
 
         //Switch the state back to seedling
         SwitchState(CropState.Seedling);

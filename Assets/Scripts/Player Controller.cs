@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
 
+    private float gravity = 9.81f;
+
 
     //Interaction components
     Playerinteraction playerInteraction;
@@ -39,11 +41,13 @@ public class PlayerController : MonoBehaviour
         //Runs the function that handles all interaction
         Interact();
 
-        if(Input.GetKey(KeyCode.RightBracket))
+
+        //Debugging purposes only
+        //Skip the time when the right square bracket is pressed
+        if (Input.GetKey(KeyCode.RightBracket))
         {
             TimeManager.Instance.Tick();
         }
-
     }
 
     public void Interact()
@@ -55,7 +59,17 @@ public class PlayerController : MonoBehaviour
             playerInteraction.Interact();
         }
 
-        //TODO: Set up item interaction
+        //Item interaction
+        if (Input.GetButtonDown("Fire2"))
+        {
+            playerInteraction.ItemInteract();
+        }
+
+        //Keep items 
+        if (Input.GetButtonDown("Fire3"))
+        {
+            playerInteraction.ItemKeep();
+        }
     }
 
 
@@ -68,6 +82,12 @@ public class PlayerController : MonoBehaviour
         //Direction in a normalised vector
         Vector3 dir = new Vector3(horizontal, 0f, vertical).normalized;
         Vector3 velocity = moveSpeed * Time.deltaTime * dir;
+
+        if (controller.isGrounded)
+        {
+            velocity.y = 0;
+        }
+        velocity.y -= Time.deltaTime * gravity;
 
         //Is the sprint key pressed down?
         if (Input.GetButton("Sprint"))
@@ -96,7 +116,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Animation speed parameter
-        animator.SetFloat("Speed", velocity.magnitude);
+        animator.SetFloat("Speed", dir.magnitude);
 
 
 

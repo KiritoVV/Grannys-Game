@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class ItemSlotData 
+public class ItemSlotData
 {
     public ItemData itemData;
     public int quantity;
@@ -79,4 +80,29 @@ public class ItemSlotData
         return itemData == null;
     }
 
+    //Convert ItemSlotData into ItemSlotSaveData
+    public static ItemSlotSaveData SerializeData(ItemSlotData itemSlot)
+    {
+        return new ItemSlotSaveData(itemSlot);
+    }
+
+    //Convert ItemSlotSaveData into ItemSlotData
+    public static ItemSlotData DeserializeData(ItemSlotSaveData itemSaveSlot)
+    {
+        //Convert string back into ItemData
+        ItemData item = InventoryManager.Instance.itemIndex.GetItemFromString(itemSaveSlot.itemID);
+        return new ItemSlotData(item, itemSaveSlot.quantity);
+    }
+
+    //Convert an entire ItemSlotData array into an ItemSlotSaveData
+    public static ItemSlotSaveData[] SerializeArray(ItemSlotData[] array)
+    {
+        return Array.ConvertAll(array, new Converter<ItemSlotData, ItemSlotSaveData >(SerializeData));
+    }
+
+    //Convert an entire ItemSlotData array into an ItemSlotSaveData
+    public static ItemSlotData[] DeserializeArray(ItemSlotSaveData[] array)
+    {
+        return Array.ConvertAll(array, new Converter<ItemSlotSaveData, ItemSlotData>(DeserializeData));
+    }
 }
