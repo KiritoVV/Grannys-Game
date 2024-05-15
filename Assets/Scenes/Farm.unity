@@ -388,7 +388,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1128037813}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -646,7 +646,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 469039241}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -964,7 +964,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 420856816}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -1537,7 +1537,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1697436784}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -1901,7 +1901,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1409441947}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -2053,7 +2053,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1831749094}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -3217,7 +3217,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1947758564}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -3982,7 +3982,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1050840093}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -4240,7 +4240,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1773049743}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -5533,7 +5533,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 261231311}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -5685,7 +5685,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1178710024}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -6878,7 +6878,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1454703312}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -8165,7 +8165,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 817366832}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -9034,7 +9034,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 905658805}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -10529,7 +10529,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 335722666}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -11368,7 +11368,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3fd0a8a4b1f699e4682c09df74c2813e, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3fd0a8a4b1f699e4682c09df74c2813e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11980,7 +11980,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 300518264}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -14226,7 +14226,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 2053061798}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -14975,7 +14975,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 11355446}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -15315,7 +15315,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1991992838}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -15572,7 +15572,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 860854348}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -16018,7 +16018,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 2138513413}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -17959,7 +17959,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 702292170}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -18195,7 +18195,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 849467705}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -19794,7 +19794,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 378407640}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -19946,7 +19946,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 409407509}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -25123,7 +25123,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 426087302}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -25381,7 +25381,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 722622494}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -25827,7 +25827,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 442631946}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -26112,7 +26112,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1455319475}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -26811,7 +26811,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 690602231}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -27992,7 +27992,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 886283529}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -28521,7 +28521,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 587484227}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -29661,7 +29661,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1254373949}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -30447,7 +30447,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1109051405}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -30620,7 +30620,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 906952469}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -31578,7 +31578,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 27323253}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -31751,7 +31751,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 2046727226}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -34462,7 +34462,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1927084122}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -34740,7 +34740,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1030137322}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -36222,7 +36222,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1062279348}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -36545,7 +36545,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1110547545}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -37791,7 +37791,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1668169487}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -39282,7 +39282,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 581745058}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -40484,7 +40484,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1247042805}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -41101,7 +41101,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 854299623}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -43294,7 +43294,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 946941440}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}
@@ -44517,7 +44517,7 @@ MonoBehaviour:
   wateredMat: {fileID: 2100000, guid: 574ed684f682ac04aa4d223f2107874d, type: 2}
   select: {fileID: 1752618242}
   cropPrefab: {fileID: 2222222855298566009, guid: 8ffcd86e63a75544187fcf4bce0e22f6, type: 3}
-  obstacleStatus: 1
+  obstacleStatus: 0
   rockPrefab: {fileID: 8859324428145559969, guid: ee0d71cf868f5d5418f9cbe7c78fed0e, type: 3}
   woodPrefab: {fileID: 8190753246715613710, guid: 025aef2048d6043408d6aba6fbef827c, type: 3}
   weedsPrefab: {fileID: 6123890096052752086, guid: 6bd833dfd84872e49856527c1b4e7834, type: 3}

@@ -2248,6 +2248,10 @@ MonoBehaviour:
     quantity: 1
   - itemData: {fileID: 11400000, guid: 6e865a821b942c64ca9e1bab1cb91fd2, type: 2}
     quantity: 1
+  - itemData: {fileID: 0}
+    quantity: 1
+  - itemData: {fileID: 0}
+    quantity: 1
   equippedToolSlot:
     itemData: {fileID: 0}
     quantity: 0
@@ -2284,7 +2288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e723b645a0a664798757858145ec31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolEquipSlot: {fileID: 4855762478198996534}
+  toolEquipSlot: {fileID: 340046995614723184}
   toolQuantityText: {fileID: 5130947175019879625}
   timeText: {fileID: 6310481582033749988}
   dateText: {fileID: 6500792024763197892}
@@ -2302,6 +2306,7 @@ MonoBehaviour:
   - {fileID: 1917847267622745960}
   itemHandSlot: {fileID: 3387605084350262913}
   itemSlots:
+  - {fileID: 2147868096886707057}
   - {fileID: 4313269026078352352}
   - {fileID: 4754800092800195815}
   - {fileID: 2619838225543469090}
