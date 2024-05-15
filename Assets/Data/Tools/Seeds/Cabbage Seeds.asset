@@ -15,6 +15,7 @@ MonoBehaviour:
   description: Seeds to grow cabbages (Takes 3 days to grow)
   thumbnail: {fileID: 21300000, guid: ae672b2158f9159478c028b3934cc214, type: 3}
   gameModel: {fileID: 0}
+  cost: 250
   DaysToGrow: 3
   cropToYield: {fileID: 11400000, guid: cfec15091abbdf1449b505dd5d5a0024, type: 2}
   seedling: {fileID: 1000013410243764, guid: 71031e4f339c7244bbe4e4c6d2dfaae3, type: 3}

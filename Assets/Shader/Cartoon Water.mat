@@ -26,6 +26,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
+    - _QueueControl: 0
     m_Colors:
     - _DarkFoamColor: {r: 0.0020024881, g: 0.04399003, b: 0.14150941, a: 0}
     - _LightFoamColor: {r: 1, g: 1, b: 1, a: 0}

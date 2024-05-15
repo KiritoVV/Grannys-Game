@@ -15,3 +15,4 @@ MonoBehaviour:
   description: A leafy green Vegetable
   thumbnail: {fileID: -1427155716, guid: a89208c923c3b194f8c0eb55877c7e5a, type: 3}
   gameModel: {fileID: 5855892177620508436, guid: 48ec337f8d81e15468c614457b8d168d, type: 3}
+  cost: 500

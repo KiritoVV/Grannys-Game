@@ -15,6 +15,7 @@ MonoBehaviour:
   description: Seeds to grow Tomatos (Takes 9 days to grow)
   thumbnail: {fileID: 21300000, guid: 971a86e90335f2c48bbe8bc75be1bb5f, type: 3}
   gameModel: {fileID: 0}
+  cost: 250
   DaysToGrow: 9
   cropToYield: {fileID: 11400000, guid: 8d91118a77a87f643b763e4b8a0507c8, type: 2}
   seedling: {fileID: 2379399024481888031, guid: d576318d67eda094b8382d4351855a2b, type: 3}
